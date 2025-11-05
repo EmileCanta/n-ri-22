@@ -58,6 +58,7 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "Analyzer.C": "cpp",
-        "Sorter.C": "cpp"
+        "Sorter.C": "cpp",
+        "FitBeta82Ga.C": "cpp"
     }
 }

@@ -1,9 +1,9 @@
 RUN121_TOV.root
-6 6000
-/Users/cantacuzene/n-ri-22/runs/data/manip/TETRA23_avec_disque_IN2P3_1971-07-26-16_00_22_RUN121.dat
+7 7000
+/Users/cantacuzene/data/n-ri-22/runs/narval_runs/manip/TETRA23_avec_disque_IN2P3_1971-07-26-16_00_22_RUN121.dat
 3
 1
 2
 3
 3 2
-Ge_TOV
+Beta_TOV

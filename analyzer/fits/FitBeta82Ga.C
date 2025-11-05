@@ -155,26 +155,55 @@ void FitBeta82Ga()
 	FitA3->SetLineColor(kRed);
   	FitA3->Draw("SAME");
   	
-  	TLegend *legend = new TLegend(0.65,0.65,0.80,0.85);
-	legend->SetTextFont(72);
-    legend->SetTextSize(0.02);
-    legend->AddEntry(hist_beta,"Data","lpe");
+  	TLegend *legend = new TLegend(0.1,0.7,0.3,0.9);
+    legend->AddEntry(hist_beta,"Beta activity","lpe");
     legend->AddEntry(FitBatemanTot,"Bateman fit","l");
     legend->AddEntry(FitBgd,"Background","l");
     legend->AddEntry(FitA1,"Galium 82","l");
     legend->AddEntry(FitA2,"Germanium 82","l");
 	legend->AddEntry(FitA3,"Germanium 81","l");
     legend->Draw();
-  	
-  	Double_t IntA1 = FitA1->Integral(0.0e3, 6.5e3);
+
+    hist_beta->SetLineColor(kRed);
+    hist_beta->SetLineWidth(4);
+
+	FitBatemanTot->SetLineWidth(6);
+	FitBgd->SetLineWidth(6);
+	FitA1->SetLineWidth(6);
+	FitA2->SetLineWidth(6);
+	FitA3->SetLineWidth(6);
+
+    hist_beta->GetXaxis()->SetTitle("Cycle time (ms)");
+    hist_beta->GetYaxis()->SetTitle("Counts / ms");
+
+    hist_beta->GetXaxis()->SetTitleSize(0.07);
+    hist_beta->GetYaxis()->SetTitleSize(0.07);
+
+    hist_beta->GetXaxis()->SetLabelSize(0.07);
+    hist_beta->GetYaxis()->SetLabelSize(0.07);
+
+    /*h1->GetXaxis()->SetTitleOffset(0.87);
+    h1->GetYaxis()->SetTitleOffset(0.40);*/
+
+    hist_beta->GetXaxis()->SetTickSize(0.07);
+
+    gStyle->SetOptTitle(0);
+
+    legend->SetBorderSize(0);
+
+    gPad->SetLeftMargin(0.20);
+    gPad->SetBottomMargin(0.25);
+    
+    gPad->RedrawAxis();
+
+	Double_t IntA1 = FitA1->Integral(0.0e3, 6.5e3);
   	Double_t IntBgd = FitBgd->Integral(0.0e3, 6.5e3);
 	Double_t IntA2 = FitA2->Integral(0.0e3, 6.5e3);
 	Double_t IntA3 = FitA3->Integral(0.0e3, 6.5e3);
-  	
+
 	cout << "IntegralBgd:" << IntBgd << endl;
 	
   	cout << "IntegralA1:" << IntA1 << endl;
 	cout << "IntegralA2:" << IntA2 << endl;
 	cout << "IntegralA3:" << IntA3 << endl;
-  	
 }

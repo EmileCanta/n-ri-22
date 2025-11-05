@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "PlotSuperposedHists.C": "cpp",
+        "PlotOneHist.C": "cpp",
+        "PlotData.C": "cpp",
+        "hist_substract.C": "cpp",
+        "efficiency.C": "cpp",
+        "systematics.C": "cpp"
+    }
+}

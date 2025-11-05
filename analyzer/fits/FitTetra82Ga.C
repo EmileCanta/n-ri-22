@@ -92,14 +92,43 @@ void FitTetra82Ga()
   	FitA1->SetLineColor(kCyan);
   	FitA1->Draw("SAME");
   	
-  	TLegend *legend=new TLegend(0.65,0.65,0.80,0.85);
-	legend->SetTextFont(72);
-    legend->SetTextSize(0.02);
-    legend->AddEntry(hist_neutron,"Data","lpe");
+	TLegend *legend = new TLegend(0.1,0.7,0.3,0.9);
+    legend->AddEntry(hist_neutron,"Neutron activity","lpe");
     legend->AddEntry(FitBatemanTot,"Bateman fit","l");
     legend->AddEntry(FitBgd,"Background","l");
     legend->AddEntry(FitA1,"Galium 82","l");
+
     legend->Draw();
+
+    hist_neutron->SetLineColor(kBlue);
+    hist_neutron->SetLineWidth(4);
+
+	FitBatemanTot->SetLineWidth(6);
+	FitBgd->SetLineWidth(6);
+	FitA1->SetLineWidth(6);
+
+    hist_neutron->GetXaxis()->SetTitle("Cycle time (ms)");
+    hist_neutron->GetYaxis()->SetTitle("Counts / ms");
+
+    hist_neutron->GetXaxis()->SetTitleSize(0.07);
+    hist_neutron->GetYaxis()->SetTitleSize(0.07);
+
+    hist_neutron->GetXaxis()->SetLabelSize(0.07);
+    hist_neutron->GetYaxis()->SetLabelSize(0.07);
+
+    /*h1->GetXaxis()->SetTitleOffset(0.87);
+    h1->GetYaxis()->SetTitleOffset(0.40);*/
+
+    hist_neutron->GetXaxis()->SetTickSize(0.07);
+
+    gStyle->SetOptTitle(0);
+
+    legend->SetBorderSize(0);
+
+    gPad->SetLeftMargin(0.20);
+    gPad->SetBottomMargin(0.25);
+    
+    gPad->RedrawAxis();
   	
   	Double_t IntA1 = FitA1->Integral(0.0e3, 6.5e3);
   	Double_t IntBgd = FitBgd->Integral(0.0e3, 6.5e3);

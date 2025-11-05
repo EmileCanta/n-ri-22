@@ -197,7 +197,7 @@ cout << " evts lus = " << nevents <<"\n";
 
 TCanvas * c2=new TCanvas("c2","c2",0,0,600,400);
 c2->cd();
-spetm->Draw();
+spetm->Draw("hist");
 f->Write();
 
        fin = clock();

@@ -1,7 +1,7 @@
 
 # DO NOT DELETE
 
-./src/Fitter_C.so: /Users/cantacuzene/n-ri-22/analyzer/./include/Fitter84Ga.h
+./src/Fitter_C.so: /Users/cantacuzene/phd/analysis/n_ri_22/analyzer/./include/Fitter84Ga.h
 ./src/Fitter_C.so: /opt/homebrew/Cellar/root/6.30.06/include/root/RtypesCore.h
 ./src/Fitter_C.so: /opt/homebrew/Cellar/root/6.30.06/include/root/ROOT/RConfig.hxx
 ./src/Fitter_C.so: /opt/homebrew/Cellar/root/6.30.06/include/root/RVersion.h
